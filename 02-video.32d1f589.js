@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>{let e=document.getElementById("vimeo-player"),r=new Vimeo.Player(e),t=throttle(()=>r.getCurrentTime().then(e=>{localStorage.setItem("videoplayer-current-time",JSON.stringify(e))}).catch(e=>{console.error("An error occurred:",e)}),1e3);r.on("timeupdate",t),(()=>{let e=localStorage.getItem("videoplayer-current-time");if(e){let t=JSON.parse(e);return r.setCurrentTime(t).then(()=>{}).catch(e=>{console.error("An error occurred:",e)})}return Promise.resolve()})()});
-//# sourceMappingURL=02-video.32d1f589.js.map
