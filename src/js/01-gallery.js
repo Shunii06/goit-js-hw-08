@@ -2,6 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
+
 const galleryContainer = document.querySelector('.gallery');
 function createGalleryItem({ preview, original, description }) {
   const listItem = document.createElement('li');
@@ -20,6 +21,7 @@ function createGalleryItem({ preview, original, description }) {
 
   return listItem;
 }
+
 galleryItems.forEach(item => {
   const galleryItem = createGalleryItem(item);
   galleryContainer.appendChild(galleryItem);
