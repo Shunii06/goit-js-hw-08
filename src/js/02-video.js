@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   player.on('timeupdate', () => {
     saveCurrentTime().then(({ success, currentTime, error }) => {});
   });
-
   const setPlaybackFromStorage = () => {
     const storedTime = localStorage.getItem('videoplayer-current-time');
     return storedTime
@@ -33,6 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
           .catch(error => ({ success: false, error }))
       : Promise.resolve({ success: true });
   };
-
   setPlaybackFromStorage().then(({ success, currentTime, error }) => {});
 });
