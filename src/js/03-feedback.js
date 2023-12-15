@@ -33,10 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   feedbackForm.addEventListener('submit', event => {
     event.preventDefault();
+
+    const userEmailAndMessage = {
+      email: emailInput.value,
+      message: messageTextarea.value,
+    };
+
     localStorage.removeItem('feedback-form-state');
     emailInput.value = '';
     messageTextarea.value = '';
 
-    console.log('Form Data:', { email: '', message: '' });
+    console.log('User input:', userEmailAndMessage);
   });
 });
